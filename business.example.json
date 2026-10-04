@@ -1,0 +1,11 @@
+{
+  "name": "Your Business",
+  "description": "A small business accepting inquiries and callback requests",
+  "hours": "Monday through Friday, 9 AM to 5 PM",
+  "departments": {
+    "SALES": "Quotes and new business inquiries",
+    "SUPPORT": "Help with existing products or services",
+    "APPOINTMENTS": "Appointment requests",
+    "GENERAL": "Other questions and messages"
+  }
+}

@@ -1,0 +1,17 @@
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.venv/
+venv/
+*.db
+*.db-*
+*.sqlite*
+.env
+.env.*
+!.env.example
+*.wav
+.agents/
+.codex/
+.aws/
+.git-local/
+business.json
