@@ -8,7 +8,24 @@ as account numbers, property details, or vehicle information fits in `details`.
 This is a terminal/microphone prototype. There is no VoIP/SIP connection, real
 call transfer, appointment booking, or message delivery integration yet.
 
-## Run
+## Quick start
+
+After [installation](#installation), open the demo menu:
+
+```sh
+python app.py
+```
+
+1. Choose **1) Sales inquiry demo**, **2) Support message demo**, or
+   **3) Appointment request demo** to watch a scripted intake.
+2. Choose **4) Interactive text demo** to type the caller's answers yourself.
+3. Read the final department and callback/intake summary, then press Enter to
+   return to the menu. Choose **6) Exit** when finished.
+
+The text demos use a deterministic mock model and need no live model server.
+Microphone sessions need the separate [voice setup](#microphone-and-model-setup).
+
+## Installation
 
 Use Python 3.10 or newer:
 
@@ -22,6 +39,8 @@ python app.py
 The menu includes scripted and interactive text demos using a deterministic mock
 model. Those demos need only `pydantic` and `rich`; tests also need `pytest`.
 The mock handles simple keywords and names, not arbitrary natural language.
+
+## Microphone and model setup
 
 For microphone input:
 
@@ -64,16 +83,3 @@ request. This records a destination; it does not transfer a real call.
 ```sh
 python -m pytest -q
 ```
-
-## Git in this workspace
-
-The environment mounts `.git` read-only, so repository metadata is stored in
-`.git-local`. Run commands from the project root using:
-
-```sh
-git --git-dir=.git-local --work-tree=. status
-git --git-dir=.git-local --work-tree=. log
-```
-
-Outside this restricted environment, replace the empty `.git` directory with
-`.git-local` to use ordinary Git commands. No remote is configured.
